@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>{% block title%}hhh{% endblock %}</title>
+<h1 >SEARCH  {{name}} </h1>
+</head>
+
+<body>
+<img src="logo.jpg"  width="150" height="170">
+<form method="GET">
+    Назва:
+    <input type="text" name = "title" id="title" class="form-control" placeholder="title" value = "{{ request.args.get('title') }}"><br>
+    Автор:
+    <input type="text" name = "author" id="author" class="form-control" placeholder="author" value = "{{ request.args.get('author') }}"><br>
+    Рік:
+    <input type="text" name = "year" id="year" class="form-control" placeholder="year" value = "{{ request.args.get('year')}}"><br>
+    <button type="submit" class="btn-success" value="enter"  >Пошук</button>
+</form>
+{% block body%}{% endblock %}
+</body>
+</html>

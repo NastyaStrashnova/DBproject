@@ -1,0 +1,13 @@
+{%extends 'main.html'%}
+{% block title%}
+login
+{% endblock %}
+
+{% block body%}
+<form method="post">
+    <input type="text" name = "email" id="email" class="form-control"placeholder="email"><br>
+    <input type="text" name = "password" id="password" class="form-control" placeholder="password"><br>
+    <button type="submit" class="btn-success" value="enter">Submit</button>
+</form>
+
+{% endblock %}
